@@ -5,17 +5,17 @@ import "../styles/global.css";
 const pageTitle = "About Me";
 
 const identity = {
-    firstName: "Sarah",
-    country: "Canada",
-    occupation: "Technical Writer",
-    hobbies: ["photography", "birdwatching", "baseball"],
+    firstName: "Oleg",
+    country: "Mars",
+    occupation: "Software Astronaut",
+    hobbies: ["scripting", "coding", "eating"],
 };
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 
 const happy = true;
 const finished = true;
-const goal = 3;
+const goal = 1;
 
 const skillColor = "navy";
 const fontWeight = "bold";
@@ -40,7 +40,7 @@ const textCase = "uppercase";
     <ul>
         <li>My name is {identity.firstName}.</li>
         <li>
-            I live in {identity.country} and I work as a {identity.occupation}.
+            I live on {identity.country} and I work as a {identity.occupation}.
         </li>
         {
             identity.hobbies.length >= 2 && (
@@ -58,13 +58,6 @@ const textCase = "uppercase";
 
     {happy && <p>I am happy to be learning Astro!</p>}
 
-    {finished && <p>I finished this tutorial!</p>}
-
-    {
-        goal === 3 ? (
-            <p>My goal is to finish in 3 days.</p>
-        ) : (
-            <p>My goal is not 3 days.</p>
-        )
-    }
+    {finished && <p>I finished this tutorial in {goal} days!</p>}
+    
 </BaseLayout>
